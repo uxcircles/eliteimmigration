@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Elite Immigration · 列斯英國移民顧問</title>
+<meta name="description" content="受 IAA 監管的列斯移民顧問。計算你最早何時可申請永居。">
+<link rel="alternate" hreflang="en" href="https://uxcircles.github.io/eliteimmigration/">
+<link rel="alternate" hreflang="zh-Hant-HK" href="https://uxcircles.github.io/eliteimmigration/zh/">
+<link rel="icon" type="image/svg+xml" href="../assets/img/mark.svg">
+<link rel="icon" type="image/png" href="../assets/img/favicon.png">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#29286c">
+<link rel="preload" href="../assets/fonts/sora.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/onest.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/site.css?v=3">
+<script defer src="../assets/site.js?v=3"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳至內容</a>
+<div class="concept-bar" role="note">
+  <div class="wrap concept-in">
+    <p><span class="concept-tag">概念</span><span>網站概念設計，並非 <a href="https://eliteimmigration.co.uk/" target="_blank" rel="noopener">Elite Immigration 官方網站</a>。</span></p>
+    <a class="concept-by" href="https://ux-circles.com/professionals" target="_blank" rel="noopener">設計：<strong>UX CIRCLES</strong> ↗</a>
+  </div>
+</div>
+<header class="head" id="top">
+  <div class="wrap head-in">
+    <a class="brand" href="index.html" aria-label="Elite Immigration 首頁">
+      <img src="../assets/img/logo.png" width="800" height="273" alt="Elite Immigration">
+    </a>
+    <nav class="nav" aria-label="主選單"><a href="individual.html">家庭及定居</a><a href="bno.html">BN(O)</a><a href="business.html">僱主及商業</a><a href="about.html">關於我們</a></nav>
+    <a class="lang" href="../" lang="en" hreflang="en">English</a>
+    <a class="head-call" href="tel:+441138662868">0113 866 2868</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">選單</button>
+  </div>
+  <div class="menu" id="menu" hidden>
+    <nav class="wrap" aria-label="選單">
+      <a href="individual.html">家庭及定居</a><a href="bno.html">BN(O)</a><a href="business.html">僱主及商業</a><a href="about.html">關於我們</a>
+      <a href="index.html#contact">免費初步諮詢</a>
+      <a href="tel:+441138662868">致電 0113 866 2868</a>
+      <a href="../" lang="en">English</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <p class="hero-place">列斯 Park Square 移民顧問</p>
+    <div class="hero-top"><h1 id="h1">BN(O)、配偶、工作簽證，幾時可以申請永居？</h1>
+    <p class="hero-lede">揀選你的簽證，再輸入在英國居留的開始日期。弧線會按現行規則，顯示最早可申請永久居留（ILR）及入籍的日期，並說明 2026 年 11 月 2 日公布的改革對你的簽證途徑有何影響。</p></div>
+    <form class="tool" id="tool" novalidate>
+      <div class="tool-fields">
+        <label class="f f-route"><span>簽證途徑</span>
+          <select id="t-route"><option value="bno">BN(O) 簽證（香港）</option><option value="partner">英國公民或定居人士的配偶／伴侶</option><option value="skilled">技術工作簽證（Skilled Worker）</option><option value="innovator">創新創業者簽證（Innovator Founder）</option><option value="long">長期合法居留（任何合法簽證）</option></select></label>
+        <label class="f f-date"><span>開始日期</span>
+          <input id="t-start" type="date" required min="2005-01-01"></label>
+        <label class="f f-pay" hidden><span>年薪（稅前）</span>
+          <select id="t-pay">
+            <option value="low">低於 £50,271</option>
+            <option value="mid">£50,271 或以上</option>
+            <option value="high">£125,141 或以上</option>
+          </select></label>
+        <label class="f f-brit" hidden><span>配偶是英國公民？</span>
+          <select id="t-brit"><option value="yes">是</option><option value="no">否，是定居人士</option></select></label>
+      </div>
+      <div class="arc" aria-hidden="true">
+        <svg viewBox="0 0 1000 200" preserveAspectRatio="none"><path class="arc-path" d="M30 180 C 250 -30, 750 -30, 970 180"/></svg>
+        <span class="dot d0"></span><span class="dot d1"></span><span class="dot d2"></span>
+      </div>
+      <ol class="stops" id="t-stops" aria-live="polite">
+        <li class="stop s0"><span class="stop-k">開始居留</span><span class="stop-d" id="t-d0">—</span></li>
+        <li class="stop s1"><span class="stop-k">永久居留 ILR</span><span class="stop-d" id="t-d1">—</span><span class="stop-n" id="t-n1"></span></li>
+        <li class="stop s2"><span class="stop-k">入籍英國</span><span class="stop-d" id="t-d2">—</span><span class="stop-n" id="t-n2"></span></li>
+      </ol>
+      <div class="change" id="t-change"></div>
+      <p class="tool-foot">以上只屬估算，並非法律意見。離境日數、簽證之間的空檔、英語及「英國生活」考試要求，都可能影響日期。
+        <a href="#contact" id="t-ask">請 Jennie 或 Rob 替你核對日期</a></p>
+    </form>
+  </div>
+</section><script type="application/json" id="tool-text">{"locale": "zh-HK", "apply": "{d} 起可申請", "years": "{n} 年", "afterIlr": "取得 ILR 後 12 個月", "withIlr": "取得 ILR 後即可申請", "pick": "請輸入日期", "now": "現行規則", "plan": "2026 年 11 月 2 日公布", "c": {"bno": "BN(O) 持有人維持 5 年定居途徑。內政大臣表明，香港 BN(O) 屬於定居途徑「維持現狀」的群組之一。", "partner": "英國公民的配偶維持 5 年途徑（「英國聯繫」群組）。如配偶只是定居人士而非英國公民，公布內容未有清楚說明，請先向我們查詢。", "skilled_low": "按已公布的方案，大部分途徑的基本年期將改為 <strong>10 年</strong>，即日期或會延至 <strong>{d}</strong>。新規則預計由 2026 年 12 月起提交國會，並於 2027 年分階段實施。除非新規則生效時已取得 ILR，現時持簽人士並不獲豁免。", "skilled_mid": "按已公布的方案，過去 5 年中有 3 年年薪達 £50,271 或以上，可維持 <strong>5 年</strong>途徑，另須至少 3 年國民保險供款。", "skilled_high": "按已公布的方案，3 年年薪達 £125,141 或以上，可走 <strong>3 年</strong>途徑；新規則生效後，最早或可於 <strong>{d}</strong> 申請定居。", "innovator": "現時 Innovator Founder 3 年可申請定居。公布內容未有清楚說明此途徑的安排，計劃前請先向我們查詢。", "long": "長期居留本身已須連續 10 年合法居留。請留意離境紀錄：長時間離開英國或逾期居留，都可能中斷 10 年的計算。"}}</script><section class="reg" aria-label="監管">
+  <div class="wrap reg-in">
+    <p class="reg-num"><span>IAA 註冊編號</span><span class="mono">F201700014</span></p>
+    <p>Elite Immigration 受<a href="https://www.gov.uk/government/organisations/immigration-advice-authority" target="_blank" rel="noopener">英國移民顧問管理局（IAA）</a>監管，顧問須持續更新移民法律知識。提供英語、廣東話及普通話服務。</p>
+  </div>
+</section><section class="ways" aria-labelledby="ways-h">
+  <div class="wrap">
+    <h2 id="ways-h">兩種服務方式</h2>
+    <div class="ways-grid">
+      <article class="way">
+        <h3>全面代表</h3>
+        <p>由我們處理整個申請，以及與內政部的所有聯絡。</p>
+        <ul>
+          <li>評估資格及所需文件</li>
+          <li>代你填寫及遞交申請</li>
+          <li>撰寫申請信及法律陳述</li>
+          <li>與 UKVI 聯絡，直至獲得決定</li>
+        </ul>
+      </article>
+      <article class="way way-alt">
+        <h3>文件全面檢查</h3>
+        <p>你自行準備申請，我們在你繳交內政部費用前替你把關。</p>
+        <ul>
+          <li>逐項檢查申請表及證明文件</li>
+          <li>指出缺漏或格式錯誤的文件</li>
+          <li>撰寫申請信，說明你如何符合移民規則</li>
+          <li>費用低於全面代表服務</li>
+        </ul>
+        <p class="small">適用於配偶、計分制、永久居留及入籍申請。</p>
+      </article>
+    </div>
+    <p class="ways-note">在可行情況下提供固定收費。首次諮詢免費，我們一般於 1 個工作天內回覆。</p>
+  </div>
+</section><section class="areas" aria-labelledby="areas-h">
+  <div class="wrap">
+    <svg class="swoosh" viewBox="0 0 240 40" aria-hidden="true" focusable="false"><path d="M2 6c70 34 160 34 236 0-50 30-112 36-160 30C46 32 20 22 2 6z"/></svg>
+    <h2 id="areas-h">服務範圍</h2>
+    <ul class="area-list"><li><a href="bno.html"><h3>BN(O) 簽證</h3><p>由首次入境許可到永居及入籍，包括以「同住家庭成員」途徑申請的成年子女。</p><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="individual.html"><h3>配偶及家庭</h3><p>配偶、未婚伴侶、未婚夫／妻簽證，以及父母和其他受養親屬。</p><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="individual.html#settle"><h3>定居及入籍</h3><p>永久居留、長期居留、歸化入籍及英國護照。</p><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="business.html"><h3>擔保牌照</h3><p>牌照申請、技術工作簽證擔保及內政部合規審查。</p><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="business.html#founders"><h3>創業及海外擴展</h3><p>創新創業者、英國擴展工作者及其他全球商業流動途徑。</p><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="individual.html#visit"><h3>探訪及歐盟身份</h3><p>探訪簽證、歐盟定居計劃、邊境工作者許可及英國祖籍簽證。</p><span class="arrow" aria-hidden="true">→</span></a></li></ul>
+  </div>
+</section><section class="people" aria-labelledby="people-h">
+  <div class="wrap">
+    <h2 id="people-h">負責你個案的顧問</h2>
+    <div class="people-grid">
+      <article class="person">
+        <p class="mono person-id">JC</p>
+        <h3>Jennie Chau</h3>
+        <p class="role">高級移民顧問 · LLB（榮譽）、LPC</p>
+        <p>2015 年起執業，專注擔保牌照、技術工作簽證規劃、配偶途徑、永居及入籍。獲 IAA 授權；較複雜或屬保留法律服務的個案，經 Truth Legal 處理。</p>
+        <p class="langs">英語 · 廣東話 · 普通話</p>
+      </article>
+      <article class="person">
+        <p class="mono person-id">RW</p>
+        <h3>Rob Waugh</h3>
+        <p class="role">移民顧問 · IAA 第一級</p>
+        <p>2018 年加入團隊。處理配偶及未婚夫／妻簽證、永居、入籍、歐盟定居計劃、英國祖籍及 BN(O) 申請，提供全面代表或文件檢查服務。</p>
+        <p class="langs">英語</p>
+      </article>
+    </div>
+    <p><a class="more" href="about.html">關於本所 →</a></p>
+  </div>
+</section><section class="quotes" aria-labelledby="q-h">
+  <div class="wrap">
+    <h2 id="q-h">客戶評語</h2>
+    <div class="q-grid">
+      <figure class="q">
+        <blockquote><p>「多謝 Jennie 協助我處理未婚妻定居簽證，過程毫不麻煩。由入境簽證到續簽，每當我們對申請有疑問，Jennie 都全天候提供協助。」</p></blockquote>
+        <figcaption>Hing Wan · 外賣店東主</figcaption>
+      </figure>
+      <figure class="q">
+        <blockquote><p lang="pt">&ldquo;Nos fomos ajudados pela Jennie para o nosso caso de imigração. A experiência foi totalmente positiva, o processo foi concluído com total sucesso e sem demora.&rdquo;</p>
+        <p class="q-tr">「我們委託 Jennie 擔任移民顧問，體驗非常正面，申請過程順利並獲批。」</p></blockquote>
+        <figcaption>Rafael Pereira da Silva &amp; family · 前曼聯及巴西國家隊球員</figcaption>
+      </figure>
+      <figure class="q">
+        <blockquote><p>「非常專業！Jenny 在我申請居留期間幫了很多，一切順利，她亦一直與我保持聯絡，讓我知道最新進度。」</p></blockquote>
+        <figcaption>Tatiana Pereira · Google 評價</figcaption>
+      </figure>
+    </div>
+    <p class="small">摘自 eliteimmigration.co.uk 刊登的客戶評語及 Google 評價。（中文為譯文）</p>
+  </div>
+</section><section class="contact" id="contact" aria-labelledby="c-h">
+  <div class="wrap contact-grid">
+    <div class="c-text">
+      <h2 id="c-h">免費初步諮詢</h2>
+      <p class="c-phone"><a href="tel:+441138662868">0113 866 2868</a></p>
+      <p>手提電話 <a href="tel:+447801195794">07801 195794</a> · WeChat <button type="button" class="copy mono" data-copy="Immigration_UK" data-done="已複製">Immigration_UK</button><br>
+      <a href="mailto:Rob@eliteimmigration.co.uk">Rob@eliteimmigration.co.uk</a></p>
+      <form class="form" id="enquiry" novalidate data-email="Rob@eliteimmigration.co.uk" data-subject="免費諮詢查詢">
+        <div class="row2">
+          <label class="f"><span>姓名</span><input name="name" autocomplete="name" required></label>
+          <label class="f"><span>電話</span><input name="phone" type="tel" autocomplete="tel" required></label>
+        </div>
+        <label class="f"><span>電郵</span><input name="email" type="email" autocomplete="email"></label>
+        <label class="f"><span>查詢事項</span><select name="topic"><option>BN(O)</option><option>配偶或家庭簽證</option><option>永居或入籍</option><option>擔保牌照或技術工作簽證</option><option>商業或創業簽證</option><option>探訪簽證</option><option>文件檢查</option><option>其他</option></select></label>
+        <label class="f"><span>簡述你的情況</span><textarea name="msg" rows="4"></textarea></label>
+        <input type="hidden" name="dates" id="f-dates">
+        <p class="f-err" role="alert" hidden>請填寫姓名及電話號碼。</p>
+        <button class="btn" type="submit">以電郵程式發送</button>
+        <p class="small">按下後會開啟已填好內容的電郵，寄給 Elite Immigration。本網站不會儲存任何資料。</p>
+      </form>
+    </div>
+    <div class="c-map">
+      <div class="map" data-map>
+        <svg class="map-sketch" viewBox="0 0 400 360" role="img" aria-label="示意地圖：Park Square 位於列斯火車站西北面，步行約 7 分鐘">
+          <rect width="400" height="360" fill="#e6e9f2"/>
+          <rect x="60" y="70" width="120" height="100" rx="6" fill="#d7e3cf"/>
+          <text x="120" y="125" text-anchor="middle" font-size="13" fill="#4a4a7a">Park Square</text>
+          <path d="M0 250h400M230 0v360" stroke="#fff" stroke-width="14"/>
+          <rect x="250" y="270" width="130" height="40" rx="4" fill="#cfd3e3"/>
+          <text x="315" y="295" text-anchor="middle" font-size="12" fill="#4a4a7a">Leeds station</text>
+          <path d="M300 270 C 280 210, 220 190, 190 130" fill="none" stroke="#bb2025" stroke-width="4" stroke-dasharray="6 6"/>
+          <circle cx="186" cy="122" r="9" fill="#29286c"/>
+        </svg>
+      </div>
+      <address class="addr">
+        <strong>Vicarage Chambers</strong><br>9 Park Square East, Leeds LS1 2LH<br>
+        由列斯火車站步行約 7 分鐘（550 米）。
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Elite+Immigration+9+Park+Square+East+Leeds" target="_blank" rel="noopener">路線 ↗</a>
+      </address>
+      <p class="small">需預約，到訪前請先致電。</p>
+      <script type="application/json" id="map-data">{"home": [-1.55065, 53.79895], "mark": "../assets/img/mark.svg", "label": "Elite Immigration", "routes": [{"name": "列斯火車站", "min": 7, "start": [-1.5478, 53.7955], "coords": [[-1.54793, 53.79545], [-1.54823, 53.7957], [-1.54845, 53.79588], [-1.54845, 53.79593], [-1.54844, 53.79601], [-1.54845, 53.79604], [-1.54846, 53.79613], [-1.54846, 53.79617], [-1.54846, 53.79621], [-1.54829, 53.79622], [-1.54824, 53.79626], [-1.5482, 53.79628], [-1.5482, 53.79635], [-1.54758, 53.79675], [-1.5477, 53.79681], [-1.54788, 53.79691], [-1.54805, 53.797], [-1.54839, 53.79719], [-1.54846, 53.79723], [-1.54859, 53.79731], [-1.54867, 53.79736], [-1.54873, 53.7974], [-1.5488, 53.79744], [-1.54913, 53.79762], [-1.54919, 53.79766], [-1.54932, 53.79769], [-1.54942, 53.79774], [-1.5494, 53.79779], [-1.54939, 53.79782], [-1.54947, 53.79783], [-1.54944, 53.7979], [-1.54939, 53.79807], [-1.54947, 53.79807], [-1.54939, 53.79829], [-1.54954, 53.7983], [-1.5498, 53.79833], [-1.55009, 53.79838], [-1.55025, 53.7984], [-1.55032, 53.79841], [-1.5503, 53.79845], [-1.55019, 53.79871], [-1.55024, 53.79872], [-1.55051, 53.79877], [-1.55066, 53.79879], [-1.55066, 53.79879]]}]}</script>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <svg class="swoosh foot-swoosh" viewBox="0 0 240 40" aria-hidden="true" focusable="false"><path d="M2 6c70 34 160 34 236 0-50 30-112 36-160 30C46 32 20 22 2 6z"/></svg>
+  <div class="wrap foot-grid">
+    <div>
+      <img class="foot-logo" src="../assets/img/logo.png" width="800" height="273" alt="Elite Immigration">
+      <p>Vicarage Chambers, 9 Park Square East, Leeds LS1 2LH</p>
+      <p>受英國移民顧問管理局（IAA）監管，註冊編號 <span class="mono">F201700014</span></p>
+    </div>
+    <div>
+      <p><a href="tel:+441138662868">0113 866 2868</a> · 列斯辦公室</p>
+      <p><a href="tel:+447801195794">07801 195794</a> · 手提電話</p>
+      <p>WeChat <span class="mono">Immigration_UK</span></p>
+      <p><a href="mailto:Rob@eliteimmigration.co.uk">Rob@eliteimmigration.co.uk</a></p>
+    </div>
+    <div>
+      <p><a href="individual.html">家庭及定居</a> · <a href="bno.html">BN(O)</a> · <a href="business.html">僱主及商業</a> · <a href="about.html">關於我們</a></p>
+      <p><a href="privacy.html">私隱及無障礙</a> · <a href="../" lang="en">English</a></p>
+      <p class="small">定居計算工具只提供估算，並非法律意見。規則已按 GOV.UK 及 2026 年 11 月 2 日公布的「積分定居」改革核對。</p>
+      <p class="small">非官方概念設計： <a href="https://ux-circles.com/professionals" target="_blank" rel="noopener">UX CIRCLES</a></p>
+    </div>
+  </div>
+</footer>
+<nav class="mbar" aria-label="快捷操作">
+  <a href="tel:+441138662868">致電</a>
+  <button type="button" data-copy="Immigration_UK" data-done="已複製">WeChat</button>
+  <a href="index.html#contact">免費諮詢</a>
+</nav>
+<div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

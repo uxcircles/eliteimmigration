@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Elite Immigration · UK immigration advisers in Leeds</title>
+<meta name="description" content="IAA-regulated immigration advisers on Park Square, Leeds. Work out when you can apply to settle.">
+<link rel="alternate" hreflang="en" href="https://uxcircles.github.io/eliteimmigration/">
+<link rel="alternate" hreflang="zh-Hant-HK" href="https://uxcircles.github.io/eliteimmigration/zh/">
+<link rel="icon" type="image/svg+xml" href="assets/img/mark.svg">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#29286c">
+<link rel="preload" href="assets/fonts/sora.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/onest.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css?v=3">
+<script defer src="assets/site.js?v=3"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="concept-bar" role="note">
+  <div class="wrap concept-in">
+    <p><span class="concept-tag">Concept</span><span>Redesign concept. Not the <a href="https://eliteimmigration.co.uk/" target="_blank" rel="noopener">official Elite Immigration website</a>.</span></p>
+    <a class="concept-by" href="https://ux-circles.com/professionals" target="_blank" rel="noopener">Designed by <strong>UX CIRCLES</strong> ↗</a>
+  </div>
+</div>
+<header class="head" id="top">
+  <div class="wrap head-in">
+    <a class="brand" href="index.html" aria-label="Elite Immigration, home">
+      <img src="assets/img/logo.png" width="800" height="273" alt="Elite Immigration">
+    </a>
+    <nav class="nav" aria-label="Main"><a href="individual.html">Families &amp; settlement</a><a href="bno.html">BN(O)</a><a href="business.html">Employers &amp; business</a><a href="about.html">About</a></nav>
+    <a class="lang" href="zh/" lang="zh-Hant-HK" hreflang="zh-Hant-HK">中文</a>
+    <a class="head-call" href="tel:+441138662868">0113 866 2868</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+  <div class="menu" id="menu" hidden>
+    <nav class="wrap" aria-label="Menu">
+      <a href="individual.html">Families &amp; settlement</a><a href="bno.html">BN(O)</a><a href="business.html">Employers &amp; business</a><a href="about.html">About</a>
+      <a href="index.html#contact">Free consultation</a>
+      <a href="tel:+441138662868">Call 0113 866 2868</a>
+      <a href="zh/" lang="zh-Hant-HK">中文</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <p class="hero-place">Immigration advisers on Park Square, Leeds</p>
+    <div class="hero-top"><h1 id="h1">When can you apply to settle?</h1>
+    <p class="hero-lede">Pick your visa and the date your time in the UK started. The arc shows the earliest dates for indefinite leave to remain and British citizenship under the rules in force today, and what the changes announced on 2 November 2026 mean for your route.</p></div>
+    <form class="tool" id="tool" novalidate>
+      <div class="tool-fields">
+        <label class="f f-route"><span>Your visa route</span>
+          <select id="t-route"><option value="bno">BN(O) visa (Hong Kong)</option><option value="partner">Partner of a British citizen or settled person</option><option value="skilled">Skilled Worker</option><option value="innovator">Innovator Founder</option><option value="long">Long residence (any lawful visas)</option></select></label>
+        <label class="f f-date"><span>Start date of your route</span>
+          <input id="t-start" type="date" required min="2005-01-01"></label>
+        <label class="f f-pay" hidden><span>Your salary (gross a year)</span>
+          <select id="t-pay">
+            <option value="low">Under £50,271</option>
+            <option value="mid">£50,271 or more</option>
+            <option value="high">£125,141 or more</option>
+          </select></label>
+        <label class="f f-brit" hidden><span>Married to a British citizen?</span>
+          <select id="t-brit"><option value="yes">Yes</option><option value="no">No, settled person</option></select></label>
+      </div>
+      <div class="arc" aria-hidden="true">
+        <svg viewBox="0 0 1000 200" preserveAspectRatio="none"><path class="arc-path" d="M30 180 C 250 -30, 750 -30, 970 180"/></svg>
+        <span class="dot d0"></span><span class="dot d1"></span><span class="dot d2"></span>
+      </div>
+      <ol class="stops" id="t-stops" aria-live="polite">
+        <li class="stop s0"><span class="stop-k">Route started</span><span class="stop-d" id="t-d0">—</span></li>
+        <li class="stop s1"><span class="stop-k">Settlement (ILR)</span><span class="stop-d" id="t-d1">—</span><span class="stop-n" id="t-n1"></span></li>
+        <li class="stop s2"><span class="stop-k">British citizenship</span><span class="stop-d" id="t-d2">—</span><span class="stop-n" id="t-n2"></span></li>
+      </ol>
+      <div class="change" id="t-change"></div>
+      <p class="tool-foot">An estimate, not legal advice. Absences, gaps between visas, English and Life in the UK requirements can all move these dates.
+        <a href="#contact" id="t-ask">Ask Jennie or Rob to check your dates</a></p>
+    </form>
+  </div>
+</section><script type="application/json" id="tool-text">{"locale": "en-GB", "apply": "apply from {d}", "years": "{n} years", "afterIlr": "12 months after ILR", "withIlr": "as soon as you have ILR", "pick": "Enter a date", "now": "Rules today", "plan": "Announced 2 Nov 2026", "c": {"bno": "BN(O) holders keep the 5-year route to settlement. The Home Secretary named Hong Kong BN(O) among the groups whose path stays as it is today.", "partner": "Partners of British citizens keep the 5-year route (the &ldquo;British connection&rdquo; group). Partners of people who are settled but not British should check with us: the announcement does not spell this out.", "skilled_low": "Under the announced plan the baseline becomes <strong>10 years</strong> for most routes, so this date could move to <strong>{d}</strong>. The new rules are expected to be laid from December 2026 and phased in through 2027. People already on the route are not exempt unless they hold ILR when the rules start.", "skilled_mid": "Earning £50,271 or more for 3 of the last 5 years keeps a <strong>5-year</strong> route under the announced plan. You will also need at least 3 years of National Insurance contributions.", "skilled_high": "Earning £125,141 or more for 3 years opens a <strong>3-year</strong> route under the announced plan, so you could reach settlement as early as <strong>{d}</strong> once the rules are in force.", "innovator": "Innovator Founder settlement is 3 years today. The announcement does not say clearly what happens to this route, so talk to us before you plan around the date.", "long": "Long residence already needs 10 years of continuous lawful residence. Check your absences: long gaps or overstays can break the 10 years."}}</script><section class="reg" aria-label="Regulation">
+  <div class="wrap reg-in">
+    <p class="reg-num"><span>IAA registration</span><span class="mono">F201700014</span></p>
+    <p>Elite Immigration is regulated by the <a href="https://www.gov.uk/government/organisations/immigration-advice-authority" target="_blank" rel="noopener">Immigration Advice Authority</a>, which requires our advisers to keep their immigration law knowledge current. Advice in English, Cantonese and Mandarin.</p>
+  </div>
+</section><section class="ways" aria-labelledby="ways-h">
+  <div class="wrap">
+    <h2 id="ways-h">Two ways to work with us</h2>
+    <div class="ways-grid">
+      <article class="way">
+        <h3>Full representation</h3>
+        <p>We handle the whole application and every message with the Home Office.</p>
+        <ul>
+          <li>Advice on eligibility and documents</li>
+          <li>We complete and submit the application for you</li>
+          <li>Covering letter and legal representations</li>
+          <li>We deal with UKVI until a decision arrives</li>
+        </ul>
+      </article>
+      <article class="way way-alt">
+        <h3>Full document check</h3>
+        <p>You prepare the application yourself; we check it before you pay the Home Office fees.</p>
+        <ul>
+          <li>A line-by-line review of the form and evidence</li>
+          <li>Missing or wrongly formatted evidence flagged</li>
+          <li>A covering letter that sets out how you meet the rules</li>
+          <li>Costs less than full representation</li>
+        </ul>
+        <p class="small">For partner, points-based, ILR and citizenship applications.</p>
+      </article>
+    </div>
+    <p class="ways-note">Fixed fees where available. The first consultation is free and we usually reply within 1 working day.</p>
+  </div>
+</section><section class="areas" aria-labelledby="areas-h">
+  <div class="wrap">
+    <svg class="swoosh" viewBox="0 0 240 40" aria-hidden="true" focusable="false"><path d="M2 6c70 34 160 34 236 0-50 30-112 36-160 30C46 32 20 22 2 6z"/></svg>
+    <h2 id="areas-h">What we advise on</h2>
+    <ul class="area-list"><li><a href="bno.html"><h3>BN(O) visas</h3><p>From first entry clearance to ILR and citizenship, including adult children under the household member route.</p><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="individual.html"><h3>Partners and families</h3><p>Spouse, unmarried partner and fiancé(e) visas, parents and other dependent relatives.</p><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="individual.html#settle"><h3>Settlement and citizenship</h3><p>Indefinite leave to remain, long residence, naturalisation and British passports.</p><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="business.html"><h3>Sponsor licences</h3><p>Licence applications, Skilled Worker sponsorship and Home Office compliance audits.</p><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="business.html#founders"><h3>Founders and expansion</h3><p>Innovator Founder, UK Expansion Worker and other Global Business Mobility routes.</p><span class="arrow" aria-hidden="true">→</span></a></li><li><a href="individual.html#visit"><h3>Visits and EU status</h3><p>Visit visas, EU Settlement Scheme, Frontier Worker permits and UK Ancestry.</p><span class="arrow" aria-hidden="true">→</span></a></li></ul>
+  </div>
+</section><section class="people" aria-labelledby="people-h">
+  <div class="wrap">
+    <h2 id="people-h">Who you will speak to</h2>
+    <div class="people-grid">
+      <article class="person">
+        <p class="mono person-id">JC</p>
+        <h3>Jennie Chau</h3>
+        <p class="role">Senior Immigration Consultant · LLB (Hons), LPC</p>
+        <p>Advising since 2015, with a focus on sponsor licences, Skilled Worker planning, partner routes, ILR and citizenship. Authorised by the IAA; complex or reserved matters run through Truth Legal.</p>
+        <p class="langs">English · Cantonese · Mandarin</p>
+      </article>
+      <article class="person">
+        <p class="mono person-id">RW</p>
+        <h3>Rob Waugh</h3>
+        <p class="role">Immigration Consultant · IAA Level 1</p>
+        <p>With the team since 2018. Partner and fiancé(e) visas, ILR, citizenship, EU Settlement Scheme, UK Ancestry and BN(O) applications, with full representation or a document check.</p>
+        <p class="langs">English</p>
+      </article>
+    </div>
+    <p><a class="more" href="about.html">About the firm →</a></p>
+  </div>
+</section><section class="quotes" aria-labelledby="q-h">
+  <div class="wrap">
+    <h2 id="q-h">What clients have written</h2>
+    <div class="q-grid">
+      <figure class="q">
+        <blockquote><p>&ldquo;Thank you Jennie for helping me to sort out my fiancée settlement visa with no hassle at all. From Entry Clearance Visa to Renewal, Jennie has offered 24 hours 7 days service whenever we have questions about our application.&rdquo;</p></blockquote>
+        <figcaption>Hing Wan · takeaway owner</figcaption>
+      </figure>
+      <figure class="q">
+        <blockquote><p lang="pt">&ldquo;Nos fomos ajudados pela Jennie para o nosso caso de imigração. A experiência foi totalmente positiva, o processo foi concluído com total sucesso e sem demora.&rdquo;</p>
+        <p class="q-tr">&ldquo;We have instructed Jennie as our Immigration Consultant, our experience with Jennie was extremely positive. The application process was smooth and successful.&rdquo;</p></blockquote>
+        <figcaption>Rafael Pereira da Silva &amp; family · former Manchester United and Brazil footballer</figcaption>
+      </figure>
+      <figure class="q">
+        <blockquote><p>&ldquo;Very professional! Jenny helped me so much in the process of getting my residency, everything went through fine and she was always in contact with me to keep me updated.&rdquo;</p></blockquote>
+        <figcaption>Tatiana Pereira · Google review</figcaption>
+      </figure>
+    </div>
+    <p class="small">Quoted from the testimonials and Google reviews published on eliteimmigration.co.uk.</p>
+  </div>
+</section><section class="contact" id="contact" aria-labelledby="c-h">
+  <div class="wrap contact-grid">
+    <div class="c-text">
+      <h2 id="c-h">Free first consultation</h2>
+      <p class="c-phone"><a href="tel:+441138662868">0113 866 2868</a></p>
+      <p>Mobile <a href="tel:+447801195794">07801 195794</a> · WeChat <button type="button" class="copy mono" data-copy="Immigration_UK" data-done="ID copied">Immigration_UK</button><br>
+      <a href="mailto:Rob@eliteimmigration.co.uk">Rob@eliteimmigration.co.uk</a></p>
+      <form class="form" id="enquiry" novalidate data-email="Rob@eliteimmigration.co.uk" data-subject="Free consultation request">
+        <div class="row2">
+          <label class="f"><span>Name</span><input name="name" autocomplete="name" required></label>
+          <label class="f"><span>Phone</span><input name="phone" type="tel" autocomplete="tel" required></label>
+        </div>
+        <label class="f"><span>Email</span><input name="email" type="email" autocomplete="email"></label>
+        <label class="f"><span>What is it about?</span><select name="topic"><option>BN(O)</option><option>Partner or family visa</option><option>Settlement (ILR) or citizenship</option><option>Sponsor licence or Skilled Worker</option><option>Business or founder visa</option><option>Visit visa</option><option>Document check</option><option>Something else</option></select></label>
+        <label class="f"><span>Your situation, in a few lines</span><textarea name="msg" rows="4"></textarea></label>
+        <input type="hidden" name="dates" id="f-dates">
+        <p class="f-err" role="alert" hidden>Please add your name and a phone number.</p>
+        <button class="btn" type="submit">Open in my email app</button>
+        <p class="small">This opens a pre-filled email to Elite Immigration. Nothing is stored on this website.</p>
+      </form>
+    </div>
+    <div class="c-map">
+      <div class="map" data-map>
+        <svg class="map-sketch" viewBox="0 0 400 360" role="img" aria-label="Sketch map: Park Square is about 7 minutes walk north-west of Leeds station">
+          <rect width="400" height="360" fill="#e6e9f2"/>
+          <rect x="60" y="70" width="120" height="100" rx="6" fill="#d7e3cf"/>
+          <text x="120" y="125" text-anchor="middle" font-size="13" fill="#4a4a7a">Park Square</text>
+          <path d="M0 250h400M230 0v360" stroke="#fff" stroke-width="14"/>
+          <rect x="250" y="270" width="130" height="40" rx="4" fill="#cfd3e3"/>
+          <text x="315" y="295" text-anchor="middle" font-size="12" fill="#4a4a7a">Leeds station</text>
+          <path d="M300 270 C 280 210, 220 190, 190 130" fill="none" stroke="#bb2025" stroke-width="4" stroke-dasharray="6 6"/>
+          <circle cx="186" cy="122" r="9" fill="#29286c"/>
+        </svg>
+      </div>
+      <address class="addr">
+        <strong>Vicarage Chambers</strong><br>9 Park Square East, Leeds LS1 2LH<br>
+        About 7 minutes on foot from Leeds station (550 m).
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Elite+Immigration+9+Park+Square+East+Leeds" target="_blank" rel="noopener">Directions ↗</a>
+      </address>
+      <p class="small">By appointment. Please call before visiting.</p>
+      <script type="application/json" id="map-data">{"home": [-1.55065, 53.79895], "mark": "assets/img/mark.svg", "label": "Elite Immigration", "routes": [{"name": "Leeds station", "min": 7, "start": [-1.5478, 53.7955], "coords": [[-1.54793, 53.79545], [-1.54823, 53.7957], [-1.54845, 53.79588], [-1.54845, 53.79593], [-1.54844, 53.79601], [-1.54845, 53.79604], [-1.54846, 53.79613], [-1.54846, 53.79617], [-1.54846, 53.79621], [-1.54829, 53.79622], [-1.54824, 53.79626], [-1.5482, 53.79628], [-1.5482, 53.79635], [-1.54758, 53.79675], [-1.5477, 53.79681], [-1.54788, 53.79691], [-1.54805, 53.797], [-1.54839, 53.79719], [-1.54846, 53.79723], [-1.54859, 53.79731], [-1.54867, 53.79736], [-1.54873, 53.7974], [-1.5488, 53.79744], [-1.54913, 53.79762], [-1.54919, 53.79766], [-1.54932, 53.79769], [-1.54942, 53.79774], [-1.5494, 53.79779], [-1.54939, 53.79782], [-1.54947, 53.79783], [-1.54944, 53.7979], [-1.54939, 53.79807], [-1.54947, 53.79807], [-1.54939, 53.79829], [-1.54954, 53.7983], [-1.5498, 53.79833], [-1.55009, 53.79838], [-1.55025, 53.7984], [-1.55032, 53.79841], [-1.5503, 53.79845], [-1.55019, 53.79871], [-1.55024, 53.79872], [-1.55051, 53.79877], [-1.55066, 53.79879], [-1.55066, 53.79879]]}]}</script>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <svg class="swoosh foot-swoosh" viewBox="0 0 240 40" aria-hidden="true" focusable="false"><path d="M2 6c70 34 160 34 236 0-50 30-112 36-160 30C46 32 20 22 2 6z"/></svg>
+  <div class="wrap foot-grid">
+    <div>
+      <img class="foot-logo" src="assets/img/logo.png" width="800" height="273" alt="Elite Immigration">
+      <p>Vicarage Chambers, 9 Park Square East, Leeds LS1 2LH</p>
+      <p>Regulated by the Immigration Advice Authority (IAA). Registration number <span class="mono">F201700014</span></p>
+    </div>
+    <div>
+      <p><a href="tel:+441138662868">0113 866 2868</a> · Leeds office</p>
+      <p><a href="tel:+447801195794">07801 195794</a> · mobile</p>
+      <p>WeChat <span class="mono">Immigration_UK</span></p>
+      <p><a href="mailto:Rob@eliteimmigration.co.uk">Rob@eliteimmigration.co.uk</a></p>
+    </div>
+    <div>
+      <p><a href="individual.html">Families &amp; settlement</a> · <a href="bno.html">BN(O)</a> · <a href="business.html">Employers &amp; business</a> · <a href="about.html">About</a></p>
+      <p><a href="privacy.html">Privacy and accessibility</a> · <a href="zh/" lang="zh-Hant-HK">中文</a></p>
+      <p class="small">The settlement tool gives an estimate, not legal advice. Rules checked against GOV.UK and the earned settlement announcement of 2 November 2026.</p>
+      <p class="small">Unofficial redesign concept by <a href="https://ux-circles.com/professionals" target="_blank" rel="noopener">UX CIRCLES</a></p>
+    </div>
+  </div>
+</footer>
+<nav class="mbar" aria-label="Quick actions">
+  <a href="tel:+441138662868">Call</a>
+  <button type="button" data-copy="Immigration_UK" data-done="ID copied">WeChat</button>
+  <a href="index.html#contact">Free consultation</a>
+</nav>
+<div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
