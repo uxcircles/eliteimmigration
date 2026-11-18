@@ -306,3 +306,13 @@ p { margin: 0 0 1em; }
   .stop-d { font-size: clamp(.9rem, 3.7vw, 1.2rem); white-space: nowrap; letter-spacing: -.03em; }
 }
 @media (max-width: 360px) { .stop-d { white-space: normal; } }
+
+/* date field: same box as the selects (border, height, radius, left text) with a calendar icon in the chevron's place */
+.f input[type="date"] {
+  height: 48px; min-height: 48px; line-height: 24px; padding: 11px 40px 11px 12px;
+  border: 1.5px solid #b9bfd4; border-radius: 8px; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cg fill='none' stroke='%2329286c' stroke-width='1.6'%3E%3Crect x='1.5' y='3' width='13' height='11.5' rx='1.5'/%3E%3Cpath d='M1.5 6.8h13M5 1v3.4M11 1v3.4'/%3E%3C/g%3E%3C/svg%3E") right 12px center / 16px no-repeat;
+  font: 400 1rem var(--text); color: var(--ink);
+}
+.f input[type="date"]::-webkit-date-and-time-value { text-align: left; margin: 0; }
+.f input[type="date"]::-webkit-calendar-picker-indicator { position: absolute; right: 0; top: 0; width: 44px; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.f input[type="date"] { position: relative; }
