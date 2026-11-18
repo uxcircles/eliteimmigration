@@ -9,7 +9,7 @@ import os
 
 BUILD = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(BUILD)
-V = "3"  # cache-bust: bump on every CSS/JS change
+V = "4"  # cache-bust: bump on every CSS/JS change
 
 LANG = "en"
 
@@ -209,7 +209,7 @@ def tool():
       <ol class="stops" id="t-stops" aria-live="polite">
         <li class="stop s0"><span class="stop-k">{L('Route started', '開始居留')}</span><span class="stop-d" id="t-d0">—</span></li>
         <li class="stop s1"><span class="stop-k">{L('Settlement (ILR)', '永久居留 ILR')}</span><span class="stop-d" id="t-d1">—</span><span class="stop-n" id="t-n1"></span></li>
-        <li class="stop s2"><span class="stop-k">{L('British citizenship', '入籍英國')}</span><span class="stop-d" id="t-d2">—</span><span class="stop-n" id="t-n2"></span></li>
+        <li class="stop s2"><span class="stop-k">{L('Citizenship', '入籍英國')}</span><span class="stop-d" id="t-d2">—</span><span class="stop-n" id="t-n2"></span></li>
       </ol>
       <div class="change" id="t-change"></div>
       <p class="tool-foot">{L('An estimate, not legal advice. Absences, gaps between visas, English and Life in the UK requirements can all move these dates.', '以上只屬估算，並非法律意見。離境日數、簽證之間的空檔、英語及「英國生活」考試要求，都可能影響日期。')}
