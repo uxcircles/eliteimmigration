@@ -6,13 +6,17 @@
   const btn = $('.menu-btn');
   const menu = $('#menu');
   if (btn && menu) {
-    btn.addEventListener('click', () => {
-      const open = btn.getAttribute('aria-expanded') !== 'true';
-      btn.setAttribute('aria-expanded', open);
+    const head = $('.head');
+    const setMenu = (open) => {
+      if (open) menu.style.setProperty('--menu-top', `${Math.round(head.getBoundingClientRect().bottom)}px`);
+      btn.setAttribute('aria-expanded', String(open));
       menu.hidden = !open;
       document.body.classList.toggle('menu-open', open);
-    });
-    menu.addEventListener('click', (e) => { if (e.target.closest('a')) { btn.setAttribute('aria-expanded', 'false'); menu.hidden = true; document.body.classList.remove('menu-open'); } });
+    };
+    btn.addEventListener('click', (e) => { e.preventDefault(); setMenu(btn.getAttribute('aria-expanded') !== 'true'); });
+    menu.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !menu.hidden) { setMenu(false); btn.focus(); } });
+    window.addEventListener('resize', () => { if (!menu.hidden && window.innerWidth > 980) setMenu(false); });
   }
 
   // ---- copy WeChat ID
