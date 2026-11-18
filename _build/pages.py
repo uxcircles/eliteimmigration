@@ -145,7 +145,7 @@ def footer(slug):
       <p>{" · ".join(f'<a href="{lp}{h}">{L(*t)}</a>' for h, t in PAGES)}</p>
       <p><a href="{lp}privacy.html">{L('Privacy and accessibility', '私隱及無障礙')}</a> · <a href="{switch_href(slug)}" lang="{L('zh-Hant-HK', 'en')}">{L('中文', 'English')}</a></p>
       <p class="small">{L('The settlement tool gives an estimate, not legal advice. Rules checked against GOV.UK and the earned settlement announcement of 2 November 2026.', '定居計算工具只提供估算，並非法律意見。規則已按 GOV.UK 及 2026 年 11 月 2 日公布的「積分定居」改革核對。')}</p>
-      <p class="small">{L('Unofficial redesign concept by', '非官方概念設計：')} <a href="{UXC}" target="_blank" rel="noopener">UX CIRCLES</a></p>
+      <p class="small">{L('Unofficial redesign concept by ', '非官方概念設計：')}<a href="{UXC}" target="_blank" rel="noopener">UX CIRCLES</a></p>
     </div>
   </div>
 </footer>
