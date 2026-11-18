@@ -316,3 +316,9 @@ p { margin: 0 0 1em; }
 .f input[type="date"]::-webkit-date-and-time-value { text-align: left; margin: 0; }
 .f input[type="date"]::-webkit-calendar-picker-indicator { position: absolute; right: 0; top: 0; width: 44px; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
 .f input[type="date"] { position: relative; }
+
+/* phones: the concept bar keeps only the Concept tag and the UX CIRCLES credit, on one line */
+@media (max-width: 600px) {
+  .concept-long { display: none; }
+  .concept-in { flex-direction: row; align-items: center; justify-content: space-between; padding-top: 6px; padding-bottom: 6px; }
+}
